@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-rows: 100px auto 50px;
+      height: 100vh;
+    }
+
+    header, footer {
+      background-color: #f8b400;
+      text-align: center;
+      padding: 10px;
+    }
+
+    main {
+      background-color: #f4f4f4;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+
+    .nested-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 10px;
+      height: auto;
+    }
+
+    .nav, .content, .sidebar {
+      padding: 10px;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+    }
+
+    .nav { background-color: #cce5ff; }
+    .content { background-color: #d4edda; }
+    .sidebar { background-color: #f8d7da; }
+  </style>
+</head>
+<body>
+  <header>Header</header>
+  <main>
+    <div class="nested-grid">
+      <div class="nav">Navigation</div>
+      <div class="content">Main Content</div>
+      <div class="sidebar">Sidebar</div>
+    </div>
+  </main>
+  <footer>Footer</footer>
+</body>
+</html>
